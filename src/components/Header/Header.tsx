@@ -17,13 +17,14 @@ const Header: FC<HeaderProps> = () => {
 	}, [])
 
 	const bgImage = randomPhoto?.urls?.regular
+	const bgColor = randomPhoto?.color
 
 	return (
 		<div className="Header">
-			<div className="Header__Image">
+			<div className="Header__Image" style={{ backgroundColor: bgColor }}>
 				<picture className='Header__Image-Bg'>
 					<source srcSet={bgImage} media="(min-width: 600px)" />
-					<img src={bgImage} alt="MDN" />
+					<img src={bgImage} alt="" />
 				</picture>
 			</div>
 			<div className='Header__SearchWrapper'>
